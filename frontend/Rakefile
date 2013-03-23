@@ -1,0 +1,8 @@
+task "default" do |t|
+	system "bundle exec slimrb -l index.slim index.html"
+	system "bundle exec compass compile"
+end
+
+task "watch" do |t|
+	system "compass watch"
+end

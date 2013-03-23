@@ -1,0 +1,4 @@
+gem "slim"
+gem "compass"
+gem "rake"
+gem "bundler"
