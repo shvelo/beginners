@@ -6,3 +6,9 @@ end
 task "watch" do |t|
 	system "compass watch"
 end
+
+task "deploy" do |t|
+	system "git add ."
+	system "git commit -am Update"
+	system "git push --all"
+end
