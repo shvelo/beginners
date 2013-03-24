@@ -1,1 +1,84 @@
-<html><head><meta charset="utf-8" /><title>დამწყები</title><meta content="" name="description" /><link href="css/style.css" rel="stylesheet" /></head><body><div id="header"><div class="container"><div id="bar"><div id="logo"><h1>დამწყები</h1></div><div id="login"></div></div><div id="intro"></div></div></div><div id="featured"><div class="container"><ul></ul></div></div><div id="register"><div class="container"></div></div></body></html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>დამწყები</title>
+    <meta content="" name="description" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="favicon.png" rel="shortcut icon" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <div id="bar">
+          <div id="logo">
+            <img src="img/logo.png" />
+          </div>
+          <div id="login">
+            <form action="login" id="signin" method="post">
+              <input name="email" placeholder="ელ ფოსტა" /><input name="password" placeholder="პაროლი" type="password" /><button type="submit">შესვლა</button><button id="plusLogin" type="button">შესვლა</button><input id="log_gplus_token" name="gplus_token" type="hidden" />
+            </form>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div id="intro">
+          <div class="left">
+            <h2>გსურთ პრაქტიკული გამოცდილების მიღება?</h2>
+            <p>დარეგისტრირდით და გააცანით თქვენი შესაძლებლობები დამსაქმებლებს!</p>
+          </div>
+          <div class="right">
+            <h2>ანდობთ თქვენს პროექტს დამწყებ სპეციალისტს?</h2>
+            <p>დარეგისტრირდით და იპოვეთ საჭირო პროფესიის ადამიანი</p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div id="featured">
+      <div class="container">
+        <ul>
+          <li>დამსაქმებელი კომპანიები</li>
+          <li>GDG Tbilisi</li>
+          <li>იტი</li>
+        </ul>
+      </div>
+    </div>
+    <div id="register">
+      <div class="container">
+        <form action="register" id="signup" method="post">
+          <h2>
+            <span>რეგისტრაცია</span><span id="plusRegister"><span class="g-signin" data-accesstype="offline" data-callback="signupCallback" data-clientid="339844422377.apps.googleusercontent.com" data-cookiepolicy="single_host_origin" data-requestvisibleactions="http://schemas.google.com/AddActivity" data-scope="https://www.googleapis.com/auth/plus.login"></span></span>
+          </h2>
+          <div class="fields">
+            <div class="labels">
+              <div>
+                <label for="name">სახელი</label>
+              </div>
+              <div>
+                <label for="email">ელ-ფოსტა</label>
+              </div>
+              <div>
+                <label for="bio">ბიოგრაფია</label>
+              </div>
+            </div>
+            <div class="inputs">
+              <div>
+                <input id="name" name="name" size="65" />
+              </div>
+              <div>
+                <input id="email" name="email" size="65" type="email" />
+              </div>
+              <div>
+                <textarea cols="50" id="bio" name="bio" rows="7"></textarea>
+              </div>
+            </div>
+            <input id="reg_gplus_token" name="gplus_token" type="hidden" />
+          </div>
+          <div class="action">
+            <button type="submit">რეგისტრაცია</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/front.js"></script>
+  </body>
+</html>

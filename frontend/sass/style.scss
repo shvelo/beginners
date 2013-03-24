@@ -1,32 +1,139 @@
 @import 'compass';
 @import 'compass/reset';
 
+.clearfix {
+	clear: both;
+	display: block;
+}
+
+input, button, textarea {
+	padding: 5px;
+	border: 1px solid #ccc;
+	color: #2d2d2d;
+	border-radius: 4px;
+	outline: none;
+	box-shadow: none;
+}
+
+button {
+	cursor: pointer;
+	background: #76bdd6;
+	color: white;
+	border-color: #4a7f96;
+}
+
 html {
 	body {
 		#header {
-			#logo {
+			padding: 2em 3em 0 2em;
+			background: url('../img/header_bg.jpg');
+			background-size: 100%;
 
+			#bar {
+				background: url('../img/stripe.png') repeat-x white;
+				padding: 1em;
+				box-shadow: 0 0 10px rgba(0,0,0,.4);
+
+				#logo {
+					float: left;
+				}
+
+				#login {
+					float: right;
+
+					form {
+						display: table-cell;
+						vertical-align: middle;
+						height: 47px;
+						line-height: 47px;
+
+						#plusLogin {
+							background: url('../img/gplus.png') no-repeat #cc3732;
+      						color: white;
+      						padding-left: 30px;
+						}
+					}
+				}
 			}
+			
+			#intro {
+				color: #c67444;
+				text-shadow: 1px 1px 1px rgba(60, 96, 123, .6);
 
-			#cta {
+				h2 {
+					color: white;
+					margin-bottom: 10px;
+					font-size: 150%;
+				}
 
+				p {
+					font-size: 110%;
+				}
+
+				.left, .right {
+					padding: 3em 5%;
+					width: 40%;
+					float: left;
+				}
 			}
 		}
 
 		#featured {
-			ul {
+			padding: 1em 3em;
+			margin: 2em 0;
+			background: url('../img/featured_bg.png');
 
+			ul {
+				li {
+					display: inline-block;
+					vertical-align: middle;
+				}
 			}
 		}
 
-		#form {
-			#register {
+		#register {
+			padding: 0 3em;
 
+			h2 {
+				color: #5d1a11;
+				font-size: 200%;
+				margin-bottom: .5em;
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				#plusRegister {
+					margin-left: .6em;
+				}
 			}
 
-			#login {
-				display: none;
+			.labels, .inputs {
+				display: inline-block;
+				vertical-align: top;
+
+				div {
+					margin-top: .5em;
+					min-height: 2em;
+					line-height: 2em;
+
+					label {
+						font-size: 120%;
+						margin-right: 1em;
+						margin-left: 1em;
+					}
+				}
 			}
+
+			.action {
+				padding: 2em 1em;
+
+				button {
+					font-size: 200%;
+				}
+			}
+			
 		}
 	}
 }

@@ -63,7 +63,136 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/* line 4, ../sass/style.scss */
+.clearfix {
+  clear: both;
+  display: block;
+}
+
+/* line 9, ../sass/style.scss */
+input, button, textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  color: #2d2d2d;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+}
+
+/* line 18, ../sass/style.scss */
+button {
+  cursor: pointer;
+  background: #76bdd6;
+  color: white;
+  border-color: #4a7f96;
+}
+
 /* line 27, ../sass/style.scss */
-html body #form #login {
-  display: none;
+html body #header {
+  padding: 2em 3em 0 2em;
+  background: url("../img/header_bg.jpg");
+  background-size: 100%;
+}
+/* line 32, ../sass/style.scss */
+html body #header #bar {
+  background: url("../img/stripe.png") repeat-x white;
+  padding: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+/* line 37, ../sass/style.scss */
+html body #header #bar #logo {
+  float: left;
+}
+/* line 41, ../sass/style.scss */
+html body #header #bar #login {
+  float: right;
+}
+/* line 44, ../sass/style.scss */
+html body #header #bar #login form {
+  display: table-cell;
+  vertical-align: middle;
+  height: 47px;
+  line-height: 47px;
+}
+/* line 50, ../sass/style.scss */
+html body #header #bar #login form #plusLogin {
+  background: url("../img/gplus.png") no-repeat #cc3732;
+  color: white;
+  padding-left: 30px;
+}
+/* line 59, ../sass/style.scss */
+html body #header #intro {
+  color: #c67444;
+  text-shadow: 1px 1px 1px rgba(60, 96, 123, 0.6);
+}
+/* line 63, ../sass/style.scss */
+html body #header #intro h2 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 150%;
+}
+/* line 69, ../sass/style.scss */
+html body #header #intro p {
+  font-size: 110%;
+}
+/* line 73, ../sass/style.scss */
+html body #header #intro .left, html body #header #intro .right {
+  padding: 3em 5%;
+  width: 40%;
+  float: left;
+}
+/* line 81, ../sass/style.scss */
+html body #featured {
+  padding: 1em 3em;
+  margin: 2em 0;
+  background: url("../img/featured_bg.png");
+}
+/* line 87, ../sass/style.scss */
+html body #featured ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 94, ../sass/style.scss */
+html body #register {
+  padding: 0 3em;
+}
+/* line 97, ../sass/style.scss */
+html body #register h2 {
+  color: #5d1a11;
+  font-size: 200%;
+  margin-bottom: .5em;
+}
+/* line 102, ../sass/style.scss */
+html body #register h2 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 107, ../sass/style.scss */
+html body #register h2 #plusRegister {
+  margin-left: .6em;
+}
+/* line 112, ../sass/style.scss */
+html body #register .labels, html body #register .inputs {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 116, ../sass/style.scss */
+html body #register .labels div, html body #register .inputs div {
+  margin-top: .5em;
+  min-height: 2em;
+  line-height: 2em;
+}
+/* line 121, ../sass/style.scss */
+html body #register .labels div label, html body #register .inputs div label {
+  font-size: 120%;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+/* line 129, ../sass/style.scss */
+html body #register .action {
+  padding: 2em 1em;
+}
+/* line 132, ../sass/style.scss */
+html body #register .action button {
+  font-size: 200%;
 }

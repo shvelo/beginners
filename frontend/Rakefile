@@ -1,5 +1,7 @@
+require "webrick"
+
 task "default" do |t|
-	system "bundle exec slimrb -l index.slim index.html"
+	system "bundle exec slimrb -l -p index.slim index.html"
 	system "bundle exec compass compile"
 end
 
@@ -11,4 +13,12 @@ task "deploy" do |t|
 	system "git add ."
 	system "git commit -am Update"
 	system "git push --all"
+end
+
+task "server" do |t|
+	include WEBrick
+	puts "Starting server: http://localhost:3000"
+	server = HTTPServer.new(:Port=>3000,:DocumentRoot=>Dir::pwd )
+	trap("INT"){ server.shutdown }
+	server.start
 end

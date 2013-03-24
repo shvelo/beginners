@@ -4,16 +4,62 @@ html
 		title დამწყები
 		meta name="description" content=""
 		link rel="stylesheet" href="css/style.css"
+		link rel="shortcut icon" href="favicon.png"
 	body
 		#header
 			.container
 				#bar
 					#logo
-						h1 დამწყები
+						img src="img/logo.png"
 					#login
+						form#signin action="login" method="post"
+							input name="email" placeholder="ელ ფოსტა"
+							input name="password" type="password" placeholder="პაროლი"
+							button type="submit" შესვლა
+							button#plusLogin type="button" შესვლა
+							input type="hidden" name="gplus_token" id="log_gplus_token"
+					.clearfix
 				#intro
+					.left
+						h2 გსურთ პრაქტიკული გამოცდილების მიღება?
+						p დარეგისტრირდით და გააცანით თქვენი შესაძლებლობები დამსაქმებლებს!
+					.right
+						h2 ანდობთ თქვენს პროექტს დამწყებ სპეციალისტს?
+						p დარეგისტრირდით და იპოვეთ საჭირო პროფესიის ადამიანი
+					.clearfix
 		#featured
 			.container
 				ul
+					li დამსაქმებელი კომპანიები
+					li GDG Tbilisi
+					li იტი
 		#register
-			.container	
+			.container
+				form#signup action="register" method="post"
+					h2
+						span რეგისტრაცია
+						span#plusRegister
+							span.g-signin data-callback="signupCallback" data-accesstype="offline" data-clientid="339844422377.apps.googleusercontent.com" data-cookiepolicy="single_host_origin" data-requestvisibleactions="http://schemas.google.com/AddActivity" data-scope="https://www.googleapis.com/auth/plus.login"
+
+					.fields
+						.labels
+							div
+								label for="name" სახელი
+							div
+								label for="email" ელ-ფოსტა
+							div
+								label for="bio" ბიოგრაფია
+
+						.inputs
+							div
+								input#name name="name" size="65"
+							div
+								input#email name="email" size="65" type="email"
+							div
+								textarea#bio name="bio" cols="50" rows="7"
+
+						input type="hidden" name="gplus_token" id="reg_gplus_token"
+
+					.action
+						button type="submit" რეგისტრაცია
+		script src="js/front.js"
